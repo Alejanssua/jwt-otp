@@ -1,0 +1,91 @@
+<app-menu></app-menu>
+<div class="padre">
+    <div class="text-center" *ngIf="isLogged; else loggedOut">
+        <h2>Ya has iniciado sesión</h2>
+    </div>
+    <ng-template #loggedOut>
+        <div  class="container d-flex justify-content-center">
+            <div  class="card" *ngIf="showImages===false">
+                <div class="card-header">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                        <a class="nav-link" routerLink="/login">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" routerLink="/registro">Crear Cuenta</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="card-body">
+                    <form #f="ngForm" id="formulario" (ngSubmit)="nextLogin()" novalidate>
+                        <div class="form-group">
+                            <label for="nombreUsuario">Nombre de Usuario</label>
+                            <input type="text" name="nombreUsuario" id="username" class="form-control"
+                            [(ngModel)]="nombreUsuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" id="pass" class="form-control"
+                            [(ngModel)]="password" required>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="image">Imagen</label>
+                            <input type="number" name="image" id="image" class="form-control"
+                            [(ngModel)]="idImg" required>
+                        </div> -->
+                        <div class="form-group">
+                            <button class="btn btn-block btn-success" [disabled]="!f.valid">
+                                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div  class="images" *ngIf="showImages===true">
+                <div class="card-header">
+                    <ul class="nav">
+                          <a class="" >Selecciona tu imagen</a>
+                    </ul>
+                </div>
+                <div class="card-body text-center" >
+                    <form #f="ngForm" novalidate>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="imagen1"></label>
+                                <img (click)="imagen1()" name="imagen1" src="../assets/img/imagen1.jpg" alt="">
+                            </div>
+                            <div class="form-group col">
+                                <label for="imagen2"></label>
+                                <img (click)="imagen2()" name="imagen2" src="../assets/img/imagen2.jpg" alt="">
+                            </div>
+                            <div class="form-group col">
+                                <label for="imagen3"></label>
+                                <img (click)="imagen3()" name="imagen3" src="../assets/img/imagen3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="imagen4"></label>
+                                <img (click)="imagen4()" name="imagen4" src="../assets/img/imagen4.jpg" alt="">
+                            </div>
+                            <div class="form-group col">
+                                <label for="imagen5"></label>
+                                <img (click)="imagen5()" name="imagen5" src="../assets/img/imagen5.jpg" alt="">
+                            </div>
+                            <div class="form-group col">
+                                <label for="imagen6"></label>
+                                <img (click)="imagen6()" name="imagen6" src="../assets/img/imagen6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-success" [disabled]="!f.valid">
+                                <i class="fas fa-sign-in-alt"></i> Continuar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,31 @@
+.card {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 18px 18px rgba(95, 91, 91, 0.2);
+    background-color: rgba(236, 227, 227, 0.986);
+  }
+  
+  p {
+      font-weight: 100;
+  }
+  
+.card .nav-item a {
+    color: #666666;;
+    text-align: center;
+}
+  
+.card-header {
+    padding-left: 100px;
+}
+    
+  
+.padre {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    height: 825px;
+}

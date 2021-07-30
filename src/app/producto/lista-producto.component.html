@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+
+<div class="padre">
+  <div class="container d-flex justify-content-center">
+      <div class="card">
+          <div class="card-header">
+              <ul class="nav">
+                    <a class="" >SERVICIOS BÁSICOS</a>
+              </ul>
+          </div>
+          <div class="card-body">
+            <form #f="ngForm" (ngSubmit)="sendNumber()" novalidate>
+              <div class="form-group">
+                <label for="service">Servicio</label>
+                <select class="form-control">
+                    <option>Luz</option>
+                    <option>Agua</option>
+                    <option>Teléfono</option>
+                    <option>Recarga Celular</option>
+                </select>
+            </div>
+              <div class="form-group">
+                  <label for="valor">Valor</label>
+                  <input type="text" name="valor" id="valor" 
+                         class="form-control" 
+                         placeholder="$$$" required>
+              </div>
+              <div class="form-group">
+                  <label for="cedula">Cédula</label>
+                  <input type="password" name="cedula" id="cedula" class="form-control"required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Numero de Celular</label>
+                <input type="text" name="phone" id="phone" class="form-control"
+                [(ngModel)]="phoneNo" required>
+            </div>
+              <div class="form-group">
+                  <button class="btn btn-success btn-block" [disabled]="!f.valid">
+                      <i class="fas fa-sign-in-alt"></i> Crear Cuenta</button>
+              </div>
+          </form>
+          </div>
+      </div>
+  </div>
+</div>

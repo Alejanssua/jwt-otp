@@ -1,0 +1,53 @@
+.card {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 18px 18px rgba(95, 91, 91, 0.2);
+    background-color: rgba(236, 227, 227, 0.986);
+  }
+  
+  .images {
+    width: 800px;
+    border-radius: 20px;
+    box-shadow: 18px 18px rgba(95, 91, 91, 0.2);
+    background-color: rgba(236, 227, 227, 0.986);
+  }
+
+  img{
+    height: 120px;
+    width: 120px;
+    box-shadow: 10px 10px 10px rgba(95, 91, 91, 0.2);
+}
+
+img:hover{
+    height: 130px;
+    width: 130px;
+}
+  
+  .card .nav-item a {
+      color: gray;
+      padding: 10px 29px;
+    }
+  
+    .card .nav-link:hover {
+      background-color: rgb(209, 209, 209);
+      padding: 10px 29px;
+    }
+  
+  
+  
+  .card .nav-item a:hover {
+      color: #666666;
+    }
+  
+  
+  
+  .padre {
+      background-color: rgba(255, 255, 255, 0.3);
+      display: flex;
+      font-family: sans-serif;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      height: 825px;
+  }
